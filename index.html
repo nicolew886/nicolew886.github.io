@@ -2,69 +2,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS 499 Computer Science ePortfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            color: #263445;
-            margin: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #203451;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        main {
-            max-width: 850px;
-            margin: 30px auto;
-            padding: 20px;
-        }
-        section {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nicole Wilson's Computer Science Capstone ePortfolio">
+  <title>Nicole Wilson | Computer Science Portfolio</title>
+
+  <style>
+    :root {
+      --navy: #14283b;
+      --teal: #357b7a;
+      --gold: #c7a775;
+      --ivory: #f7f6f2;
+      --text: #293744;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    nav {
+      background: var(--navy);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      border-bottom: 1px solid #45606c;
+    }
+
+    .logo {
+      color: white;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #e1e9e9;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    header {
+      background: linear-gradient(135deg, #14283b, #24555e);
+      color: white;
+      text-align: center;
+      padding: 95px 20px;
+    }
+
+    .eyebrow {
+      color: #e1c99e;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    header h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 600;
+      letter-spacing: -1.5px;
+      margin: 15px 0;
+    }
+
+    header h2 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #d5e6e6;
+    }
+
+    .accent {
+      width: 65px;
+      height: 3px;
+      background: var(--gold);
+      margin: 28px auto;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: auto;
+      color: #e3e9e9;
+      font-size: 15px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 25px;
+    }
+
+    .section-heading {
+      color: var(--navy);
+      font-size: 27px;
+      margin-bottom: 12px;
+    }
+
+    .about {
+      padding-bottom: 45px;
+      border-bottom: 1px solid #dddcd5;
+      margin-bottom: 55px;
+    }
+
+    .section-label {
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border: 1px solid #e5e7e4;
+      border-top: 4px solid var(--teal);
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(20, 40, 59, 0.05);
+    }
+
+    .card-number {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin: 15px 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #596572;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .additional {
+      margin-top: 55px;
+      padding: 30px;
+      background: #e9eeeb;
+      border-left: 4px solid var(--gold);
+      border-radius: 6px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #dce5e5;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      header {
+        padding: 65px 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Computer Science ePortfolio</h1>
-        <p>Southern New Hampshire University</p>
-        <p>CS 499 | Computer Science Capstone</p>
-    </header>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>
-                I am pursuing a Bachelor of Science in
-                Computer Science with a concentration
-                in Information Security. My interests
-                include cybersecurity, software quality
-                assurance, and IT analysis.
-            </p>
-        </section>
+  <nav>
+    <div class="logo">NW.</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#review">Code Review</a>
+      <a href="#assessment">Assessment</a>
+    </div>
+  </nav>
 
-        <section>
-            <h2>Software Engineering and Design</h2>
-            <p>Enhancement coming soon.</p>
-        </section>
+  <header>
+    <div class="eyebrow">Computer Science ePortfolio</div>
+    <h1>Nicole Wilson</h1>
+    <h2>Computer Science | Information Security</h2>
+    <div class="accent"></div>
+    <p class="subtitle">
+      Southern New Hampshire University
+      <br>
+      CS 499 | Computer Science Capstone
+    </p>
+  </header>
 
-        <section>
-            <h2>Algorithms and Data Structures</h2>
-            <p>Enhancement coming soon.</p>
-        </section>
+  <main>
 
-        <section>
-            <h2>Databases</h2>
-            <p>Enhancement coming soon.</p>
-        </section>
-    </main>
+    <section id="about" class="about">
+      <div class="section-label">Introduction</div>
+      <h2 class="section-heading">About Me</h2>
+      <p>
+        I am pursuing a Bachelor of Science in Computer
+        Science with a concentration in Information
+        Security at Southern New Hampshire University.
+        My academic interests include cybersecurity,
+        software engineering, database management,
+        and software quality assurance.
+      </p>
+      <p>
+        My professional background includes quality
+        assurance, regulatory compliance, process
+        improvement, and user acceptance testing.
+        This portfolio highlights my technical
+        development and the application of computer
+        science principles to practical problems.
+      </p>
+    </section>
+
+    <section id="projects">
+      <div class="section-label">Selected Work</div>
+      <h2 class="section-heading">Capstone Enhancements</h2>
+      <p>
+        This portfolio will showcase original projects
+        and their enhancements across three key areas
+        of computer science.
+      </p>
+
+      <div class="projects">
+
+        <article class="card">
+          <div class="card-number">01 / ENGINEERING</div>
+          <h3>Software Engineering and Design</h3>
+          <p>
+            Enhancing software functionality, design,
+            maintainability, and reliability through
+            established development practices.
+          </p>
+          <span class="status">Coming Soon</span>
+        </article>
+
+        <article class="card">
+          <div class="card-number">02 / ALGORITHMS</div>
+          <h3>Algorithms and Data Structures</h3>
+          <p>
+            Evaluating and improving computational
+            solutions through efficient algorithms,
+            data organization, and problem-solving.
+          </p>
+          <span class="status">Coming Soon</span>
+        </article>
+
+        <article class="card">
+          <div class="card-number">03 / DATABASES</div>
+          <h3>Database Management</h3>
+          <p>
+            Improving database operations, data
+            integrity, information retrieval,
+            and secure data management.
+          </p>
+          <span class="status">Coming Soon</span>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="review" class="additional">
+      <div class="section-label">Technical Review</div>
+      <h2 class="section-heading">Code Review</h2>
+      <p>
+        A walkthrough of the original projects,
+        technical evaluations, and proposed
+        enhancements will be added during the capstone.
+      </p>
+    </section>
+
+    <section id="assessment" class="additional">
+      <div class="section-label">Professional Development</div>
+      <h2 class="section-heading">Professional Self-Assessment</h2>
+      <p>
+        My professional self-assessment will reflect
+        on the technical skills, experiences, and
+        knowledge developed throughout the
+        Computer Science program.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    Nicole Wilson | CS 499 Computer Science Capstone
+    <br>
+    Southern New Hampshire University
+  </footer>
+
 </body>
 </html>
